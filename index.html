@@ -6,10 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facebook - entre ou cadastre-se</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/libs/justValidateTooltip.css">
+
 </head>
 <body>
-  
-  <script src="libs/just-validate.js"></script>
+  <main>
+    <header>
+      <div class="top-bar">
+        <div class="logo-box">
+          <a href="#"><img class="facebook-logo" src="imgs/facebook-logo.png" alt="logo do facebook"></a>
+        </div>
+        <div class="login-box">
+          <form class="facebook-login" action="post">
+            <table>
+              <tr>
+                <td>
+                  <label for="user">Email ou telefone</label>
+                </td>
+                <td>
+                  <label for="pass">Senha</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="user" id="user">
+                </td>
+                <td>
+                  <input type="password" name="pass" id="pass">
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <p>Esqueceu a conta?</p>
+                </td>
+              </tr>
+            </table>
+            <input type="submit" value="Entrar" id="login-btn">
+          </form>
+        </div>
+      </div>
+    </header>
+
+
+  </main>
 </body>
 </html>
