@@ -75,6 +75,8 @@ body {
 .right-content {
   width: 300px;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -94,8 +96,16 @@ footer {
   display: flex;
 }
 
-.cadastro input {
+.cadastro {
+  font-size: 14px;
+}
+
+.cadastro #campo {
   width: 125px;
   margin-right: 15px;
   margin-bottom: 5px;
+}
+
+.form-dist {
+  margin-bottom: 15px;
 }
