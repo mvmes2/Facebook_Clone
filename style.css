@@ -55,6 +55,7 @@ body {
 
 .left-content {
   width: 800px;
+  margin-left: 10px;
 }
 
 #facebook-slogan {
@@ -87,4 +88,14 @@ footer {
   font-size: 11px;
   color: #737373;
   margin-top: 15px;
+}
+
+.name {
+  display: flex;
+}
+
+.cadastro input {
+  width: 125px;
+  margin-right: 15px;
+  margin-bottom: 5px;
 }
