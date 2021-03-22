@@ -11,6 +11,8 @@ body {
   display: flex;
   background-color: rgb(66, 103, 178);
   justify-content: space-between;
+  align-content: center;
+  align-items: center;
 }
 
 .form-group {
@@ -22,7 +24,7 @@ body {
 
 .form-control {
   align-self: flex-end;
-  padding-bottom: 16px;
+  padding-bottom: 9px;
 }
 
 .facebook-logo {
@@ -48,5 +50,41 @@ body {
   display: flex;
   flex-direction: row;
   background-color: #d5dae8;
-  height: 300px;
+  justify-content: space-between;
+}
+
+.left-content {
+  width: 800px;
+}
+
+#facebook-slogan {
+  color: #0e385f;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  margin-top: 40px;
+  width: 450px;
+  word-spacing: -1px;
+}
+
+#facebook-networking {
+  width: 537px;
+}
+
+.right-content {
+  width: 300px;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 31px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+footer {
+  font-size: 11px;
+  color: #737373;
+  margin-top: 15px;
 }
