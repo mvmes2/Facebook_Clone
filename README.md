@@ -267,7 +267,7 @@ Caso você faça o download de bibliotecas externas, utilize o diretório libs (
 
   Pontos importantes:
   * Essa classe deve se chamar form-group
-  * Essa classe deve possuir a propriedade `diplay: flex`
+  * Essa classe deve possuir a propriedade `display: flex`
   * Alinhe o eixo principal dessa classe para ser o eixo vertical
 
 
