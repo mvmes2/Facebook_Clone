@@ -12,7 +12,6 @@ body {
   display: flex;
   background-color: rgb(66, 103, 178);
   justify-content: space-between;
-  align-content: center;
   align-items: center;
 }
 
@@ -24,14 +23,12 @@ body {
   font-size: 13px;
   display: flex;
   color: white;
-  align-self: flex-start;
+  flex-direction: row;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: flex-end;
   padding: 7px;
 }
 
@@ -47,7 +44,6 @@ body {
   color: white;
   background-color: blue;
   margin-right: 3px;
-  border-radius: 5px;
 }
 
 .main-content {
