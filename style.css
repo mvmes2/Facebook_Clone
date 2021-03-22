@@ -16,11 +16,15 @@ body {
 
 } */
 
-.login-box {
+.form-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
   align-content: center;
+  padding: 7px;
+}
+
+.form-control {
+  align-self: flex-end;
 }
 
 .facebook-logo {
@@ -35,9 +39,9 @@ body {
   align-content: center;
 }
 
-#login-btn {
+#button-login {
   font-weight: 700;
   color: white;
   background-color: blue;
-  margin: 25px 1px;
+  margin-bottom: 7px;
 }

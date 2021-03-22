@@ -15,12 +15,13 @@
         <div class="logo-box">
           <a href="#"><img class="facebook-logo" src="imgs/facebook-logo.png" alt="logo do facebook"></a>
         </div>
-        <div class="login-box">
+        <div class="form-group">
           <form class="facebook-login" action="post">
-            <table>
+
+            <!-- <table>
               <tr>
                 <td>
-                  <label for="user">Email ou telefone</label>
+                  <label id="user-email-phone-label" for="user-email-phone">Email ou telefone</label>
                 </td>
                 <td>
                   <label for="pass">Senha</label>
@@ -28,7 +29,7 @@
               </tr>
               <tr>
                 <td>
-                  <input type="text" name="user" id="user">
+                  <input type="text" name="user" id="user-email-phone">
                 </td>
                 <td>
                   <input type="password" name="pass" id="pass">
@@ -40,8 +41,23 @@
                   <p>Esqueceu a conta?</p>
                 </td>
               </tr>
-            </table>
-            <input type="submit" value="Entrar" id="login-btn">
+            </table> -->
+
+            <div class="form-group">
+              <label id="user-email-phone-label" for="user-email-phone">Email ou telefone</label>
+              <input type="text" name="user" id="user-email-phone">
+            </div>
+
+            <div class="form-group">
+              <label for="user-password">Senha</label>
+              <input type="password" name="pass" id="user-password">
+              <!-- <p>Esqueceu a conta?</p> -->
+            </div>
+
+            <div class="form-control">
+              <input type="submit" value="Entrar" id="button-login">
+            </div>
+            
           </form>
         </div>
       </div>
