@@ -22,6 +22,7 @@ body {
 
 .form-control {
   align-self: flex-end;
+  padding-bottom: 16px;
 }
 
 .facebook-logo {
@@ -40,7 +41,6 @@ body {
   font-weight: 700;
   color: white;
   background-color: blue;
-  margin-bottom: 7px;
 }
 
 .main-content {
