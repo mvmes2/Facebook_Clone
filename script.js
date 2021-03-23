@@ -7,6 +7,7 @@ const sobrenome = document.getElementById('last-name');
 const email = document.getElementById('email');
 const niver = document.getElementById('birthdate');
 const right = document.querySelector('.right-content');
+const error = document.getElementById('error');
 
 // function clickLogin() {
 //   const valor = document.getElementById('user-email-phone');
@@ -63,6 +64,8 @@ function escreve() {
   right.appendChild(boasVindas4);
 }
 
+// validador
+
 const inputText = document.querySelectorAll('.campo');
 
 function validator(event) {
@@ -73,6 +76,7 @@ function validator(event) {
     }
   }
   if (contador !== 0) {
+    error.classList.remove('return-form');
     event.preventDefault();
   }
 }
