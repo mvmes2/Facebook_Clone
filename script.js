@@ -60,7 +60,7 @@ const registro = () => {
     } else if (document.getElementById('M').checked) {
       novoCad.push(document.getElementById('M').value);
     } else {
-      novoCad.push(document.getElementById('gender-custom').value);
+      novoCad.push('Personalizado');
     }
     apaga();
     escreve();
