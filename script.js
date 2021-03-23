@@ -7,8 +7,6 @@ const sobrenome = document.getElementById('last-name');
 const email = document.getElementById('email');
 const niver = document.getElementById('birthdate');
 const right = document.querySelector('.right-content');
-const error = document.getElementById('error');
-const senha = document.getElementById('senha');
 
 // function clickLogin() {
 //   const valor = document.getElementById('user-email-phone');
@@ -65,10 +63,25 @@ function escreve() {
   right.appendChild(boasVindas4);
 }
 
+const inputText = document.querySelectorAll('.campo');
+
+function validator(event) {
+  let contador = 0;
+  for (let index = 0; index < inputText.length; index += 1) {
+    if (inputText[index].value === '') {
+      contador += 1;
+    }
+  }
+  if (contador !== 0) {
+    event.preventDefault();
+  }
+}
+
 // armazena os valores do form no array
 
 const registro = () => {
   registroBtn.addEventListener('click', () => {
+    validator();
     novoCad.push(nome.value);
     novoCad.push(sobrenome.value);
     novoCad.push(email.value);
@@ -85,75 +98,8 @@ const registro = () => {
   });
 };
 
-const hidden = 'return-form';
-
-const validatorNome = () => {
-  nome.addEventListener('keyup', () => {
-    if (nome.validity.valueMissing === true) {
-      registroBtn.disabled = false;
-      error.classList.add(hidden);
-    } else {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    }
-  });
-};
-
-const validatorSobrenome = () => {
-  sobrenome.addEventListener('keyup', () => {
-    if (sobrenome.validity.valueMissing === true) {
-      registroBtn.disabled = false;
-      error.classList.add(hidden);
-    } else {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    }
-  });
-};
-
-const validatorEmail = () => {
-  email.addEventListener('keyup', () => {
-    if (email.validity.valueMissing === true) {
-      registroBtn.disabled = false;
-      error.classList.add(hidden);
-    } else {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    }
-  });
-};
-
-const validatorSenha = () => {
-  senha.addEventListener('keyup', () => {
-    if (senha.validity.valueMissing === true) {
-      registroBtn.disabled = false;
-      error.classList.add(hidden);
-    } else {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    }
-  });
-};
-
-const validatorNasc = () => {
-  niver.addEventListener('keyup', () => {
-    if (niver.validity.valueMissing === false) {
-      registroBtn.disabled = false;
-      error.classList.add(hidden);
-    } else {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    }
-  });
-};
-
 window.onload = () => {
   clickLogin();
   selectGender();
   registro();
-  validatorNome();
-  validatorSobrenome();
-  validatorEmail();
-  validatorSenha();
-  validatorNasc();
 };
