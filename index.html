@@ -42,21 +42,23 @@
         <p class="quick-easy form-dist">É rápido e fácil.</p>
         <form action="" class="cadastro">
           <section class="name">
-            <input type="text" name="firstname" class="names form-dist" placeholder="Nome" id="campo" >
-            <input type="text" name="lastname" class="names form-dist last-name" placeholder="Sobrenome" id="campo">
+            <input type="text" name="firstname" class="names form-dist campo" placeholder="Nome" >
+            <input type="text" name="lastname" class="names form-dist last-name campo" placeholder="Sobrenome" >
           </section>
 
-          <input type="text" name="phone_email" placeholder="Celular ou email" id="campo">
-          <input class="Nova-senha" type="password" name="password" placeholder="Nova senha" id="campo"><br>
+          <input type="text" name="phone_email" placeholder="Celular ou email" class="campo">
+          <input class="Nova-senha campo" type="password" name="password" placeholder="Nova senha" ><br>
           <label id="label-birthdate" for="birthdate">Data de nascimento</label><br>
           <input type="text" id="birthdate" name="birthdate" placeholder="dd/mm/aaaa" class="form-dist"><br>
           <label for="gender" id="label-gender" class="form-dist">Gênero</label>
 
           <section class="radios">
-          <input class="form-dist" type="radio" name="gender" id="F" value="F"><label id="label-gender" for="F">Feminino</label>
-          <input class="form-dist" type="radio" name="gender" id="M" value="M" checked><label id="label-gender" for="M">Masculino</label>
-          <input class="form-dist" type="radio" name="gender" id="P" value="P"><label id="label-gender" for="P">Personalizado</label>
+          <input class="form-dist" type="radio" name="gender" id="F" value="Feminino"><label id="label-gender" for="F">Feminino</label>
+          <input class="form-dist" type="radio" name="gender" id="M" value="Masculino" checked><label id="label-gender" for="M">Masculino</label>
+          <input class="form-dist" type="radio" name="gender" id="P" value="Personalizado"><label id="label-gender" for="P">Personalizado</label>
+          <input class="alter-gender campo form-dist" id="gender-p" type="text" placeholder="Informe seu gênero">
           </section>
+          <p class="return-form">Campos inválidos</p>
           <button class="submit-button" type="submit" id="facebook-register">Cadastre-se</button>
         </form>
       </section>

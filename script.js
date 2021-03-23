@@ -1,4 +1,5 @@
 const login = document.getElementById('button-login');
+const radioBtn = document.querySelector('.radios');
 
 // function clickLogin() {
 //   const valor = document.getElementById('user-email-phone');
@@ -17,6 +18,18 @@ const clickLogin = () => {
   });
 };
 
+const selectGender = () => {
+  radioBtn.addEventListener('click', () => {
+    const personalized = document.getElementById('gender-p');
+    if (document.getElementById('P').checked === true) {
+      personalized.classList.remove('alter-gender');
+    } else {
+      personalized.classList.add('alter-gender');
+    }
+  });
+};
+
 window.onload = () => {
   clickLogin();
+  selectGender();
 };

@@ -108,7 +108,7 @@ footer {
   font-size: 14px;
 }
 
-.cadastro #campo {
+.campo {
   width: 125px;
 }
 
@@ -119,4 +119,12 @@ footer {
 
 .form-dist {
   margin-bottom: 15px;
+}
+
+.return-form {
+  display: none;
+}
+
+.alter-gender {
+  display: none;
 }
