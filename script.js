@@ -84,21 +84,25 @@ function validator() {
 
 // armazena os valores do form no array
 
+function grava() {
+  novoCad.push(nome.value);
+  novoCad.push(sobrenome.value);
+  novoCad.push(email.value);
+  novoCad.push(niver.value);
+  if (document.getElementById('F').checked) {
+    novoCad.push(document.getElementById('F').value);
+  } else if (document.getElementById('M').checked) {
+    novoCad.push(document.getElementById('M').value);
+  } else { novoCad.push('Personalizado'); }
+}
+
 const registro = () => {
   registroBtn.addEventListener('click', (event) => {
     validator();
     if (parar === true) {
       event.preventDefault();
     } else {
-      novoCad.push(nome.value);
-      novoCad.push(sobrenome.value);
-      novoCad.push(email.value);
-      novoCad.push(niver.value);
-      if (document.getElementById('F').checked) {
-        novoCad.push(document.getElementById('F').value);
-      } else if (document.getElementById('M').checked) {
-        novoCad.push(document.getElementById('M').value);
-      } else { novoCad.push('Personalizado'); }
+      grava();
       apaga();
       escreve();
     }
