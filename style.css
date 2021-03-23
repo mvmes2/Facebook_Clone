@@ -109,6 +109,7 @@ footer {
 }
 
 .campo {
+  display: flex;
   width: 125px;
 }
 
@@ -129,6 +130,6 @@ footer {
   display: none;
 }
 
-.submit-button {
+#facebook-register {
   margin-bottom: 40px;
 }

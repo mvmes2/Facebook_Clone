@@ -1,5 +1,5 @@
 const login = document.getElementById('button-login');
-const radioBtn = document.querySelector('.radios');
+const radioBtn = document.querySelector('.gender-radio');
 
 // function clickLogin() {
 //   const valor = document.getElementById('user-email-phone');
