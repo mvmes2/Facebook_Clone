@@ -91,6 +91,7 @@ footer {
   font-size: 11px;
   color: #737373;
   margin-top: 15px;
+  margin-left: 10px;
 }
 
 .name {
@@ -113,8 +114,4 @@ footer {
 
 .form-dist {
   margin-bottom: 15px;
-}
-
-footer {
-  margin-left: 10px;
 }
