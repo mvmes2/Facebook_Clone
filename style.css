@@ -108,9 +108,13 @@ footer {
 }
 
 .Nova-senha {
-  margin-left: -4px;
+  margin-left: 1px;
 }
 
 .form-dist {
   margin-bottom: 15px;
+}
+
+footer {
+  margin-left: 10px;
 }
