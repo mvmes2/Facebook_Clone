@@ -128,3 +128,7 @@ footer {
 .alter-gender {
   display: none;
 }
+
+.submit-button {
+margin-bottom: 40px;
+}

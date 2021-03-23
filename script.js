@@ -20,7 +20,7 @@ const clickLogin = () => {
 
 const selectGender = () => {
   radioBtn.addEventListener('click', () => {
-    const personalized = document.getElementById('gender-p');
+    const personalized = document.getElementById('gender-custom');
     if (document.getElementById('P').checked === true) {
       personalized.classList.remove('alter-gender');
     } else {
