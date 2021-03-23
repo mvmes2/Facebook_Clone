@@ -74,6 +74,7 @@ body {
 
 .right-content {
   width: 300px;
+  font-size: 14px;
   margin-right: 120px;
   justify-content: center;
   display: flex;
