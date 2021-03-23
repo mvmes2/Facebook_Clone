@@ -42,7 +42,7 @@
           <p class="quick-easy form-dist">É rápido e fácil.</p>
           <form action="" class="cadastro">
             <section class="name">
-              <input type="text" id="first-name" name="firstname" class="names form-dist campo" placeholder="Nome" >
+              <input type="text" id="first-name" name="firstname" class="names form-dist campo" placeholder="Nome" required>
               <input type="text" id="last-name" name="lastname" class="names form-dist last-name campo" placeholder="Sobrenome" >
             </section>
 
@@ -65,8 +65,8 @@
 
             <input class="alter-gender campo form-dist" name="gender-custom" id="gender-custom" type="text" placeholder="Gênero (opcional)">
 
-            <button type="submit" id="facebook-register">Cadastre-se</button>
-            <p class="return-form">Campos inválidos</p>
+            <button class="return-form" type="submit" id="facebook-register">Cadastre-se</button>
+            <p id='error'>Campos inválidos</p>
 
           </form>
         </div>

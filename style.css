@@ -124,7 +124,7 @@ footer {
 }
 
 .return-form {
-  display: none;
+  visibility:hidden ;
 }
 
 .alter-gender {
@@ -133,4 +133,10 @@ footer {
 
 #facebook-register {
   margin-bottom: 40px;
+}
+
+#error {
+  color: red;
+  font-weight: 700;
+  margin-bottom: 20px;
 }

@@ -7,6 +7,7 @@ const sobrenome = document.getElementById('last-name');
 const email = document.getElementById('email');
 const niver = document.getElementById('birthdate');
 const right = document.querySelector('.right-content');
+const error = document.getElementById('error');
 
 // function clickLogin() {
 //   const valor = document.getElementById('user-email-phone');
@@ -25,6 +26,8 @@ const clickLogin = () => {
   });
 };
 
+// gera o campo para adicionar genero personalizado
+
 const selectGender = () => {
   radioBtn.addEventListener('click', () => {
     const personalized = document.getElementById('gender-custom');
@@ -36,18 +39,32 @@ const selectGender = () => {
   });
 };
 
+// apaga todo o formulario na esquerda
+
 function apaga() {
   right.innerHTML = '';
 }
 
+// cria os paragrafos com os textos dos valores do formularios
+
+// como o lint tava reclamando que a linha estava muito grande com tudo junto, separei cada valor em um paragrafo
+
 function escreve() {
   const boasVindas1 = document.createElement('p');
   const boasVindas2 = document.createElement('p');
+  const boasVindas3 = document.createElement('p');
+  const boasVindas4 = document.createElement('p');
   boasVindas1.innerText = `Olá, ${novoCad[0]} ${novoCad[1]}`;
-  boasVindas2.innerText = `Dados: ${novoCad[2]} ${novoCad[3]} ${novoCad[4]}`;
+  boasVindas2.innerText = `Email: ${novoCad[2]}`;
+  boasVindas3.innerText = `Nascimento: ${novoCad[3]}`;
+  boasVindas4.innerText = `Genero: ${novoCad[4]}`;
   right.appendChild(boasVindas1);
   right.appendChild(boasVindas2);
+  right.appendChild(boasVindas3);
+  right.appendChild(boasVindas4);
 }
+
+// armazena os valores do form no array
 
 const registro = () => {
   registroBtn.addEventListener('click', () => {
@@ -67,8 +84,23 @@ const registro = () => {
   });
 };
 
+const validator = () => {
+  nome.addEventListener('keyup', () => {
+    const habilitada = 'return-form';
+
+    if (nome.value === '') {
+      registroBtn.classList.add(habilitada);
+      error.classList.remove(habilitada);
+    } else {
+      registroBtn.classList.remove(habilitada);
+      error.classList.add(habilitada);
+    }
+  });
+};
+
 window.onload = () => {
   clickLogin();
   selectGender();
   registro();
+  validator();
 };
