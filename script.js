@@ -8,6 +8,7 @@ const email = document.getElementById('email');
 const niver = document.getElementById('birthdate');
 const right = document.querySelector('.right-content');
 const error = document.getElementById('error');
+const senha = document.getElementById('senha');
 
 // function clickLogin() {
 //   const valor = document.getElementById('user-email-phone');
@@ -84,16 +85,64 @@ const registro = () => {
   });
 };
 
-const validator = () => {
-  nome.addEventListener('keyup', () => {
-    const habilitada = 'return-form';
+const hidden = 'return-form';
 
+const validatorNome = () => {
+  nome.addEventListener('keyup', () => {
     if (nome.value === '') {
-      registroBtn.classList.add(habilitada);
-      error.classList.remove(habilitada);
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
     } else {
-      registroBtn.classList.remove(habilitada);
-      error.classList.add(habilitada);
+      registroBtn.disabled = false;
+      error.classList.add(hidden);
+    }
+  });
+};
+
+const validatorSobrenome = () => {
+  sobrenome.addEventListener('keyup', () => {
+    if (sobrenome.value === '') {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
+    } else {
+      registroBtn.disabled = false;
+      error.classList.add(hidden);
+    }
+  });
+};
+
+const validatorEmail = () => {
+  email.addEventListener('keyup', () => {
+    if (email.value === '') {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
+    } else {
+      registroBtn.disabled = false;
+      error.classList.add(hidden);
+    }
+  });
+};
+
+const validatorSenha = () => {
+  senha.addEventListener('keyup', () => {
+    if (senha.value === '') {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
+    } else {
+      registroBtn.disabled = false;
+      error.classList.add(hidden);
+    }
+  });
+};
+
+const validatorNasc = () => {
+  niver.addEventListener('keyup', () => {
+    if (niver.value === '') {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
+    } else {
+      registroBtn.disabled = false;
+      error.classList.add(hidden);
     }
   });
 };
@@ -102,5 +151,9 @@ window.onload = () => {
   clickLogin();
   selectGender();
   registro();
-  validator();
+  validatorNome();
+  validatorSobrenome();
+  validatorEmail();
+  validatorSenha();
+  validatorNasc();
 };
