@@ -103,6 +103,7 @@ const registro = () => {
     validator();
     if (parar === true) {
       event.preventDefault();
+      parar = false;
     } else {
       grava();
       apaga();
