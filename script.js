@@ -67,38 +67,41 @@ function escreve() {
 // validador
 
 const inputText = document.querySelectorAll('.campo');
+let parar;
 
-function validator(event) {
+function validator() {
   let contador = 0;
   for (let index = 0; index < inputText.length; index += 1) {
     if (inputText[index].value === '') {
       contador += 1;
     }
   }
-  if (contador !== 0) {
+  if (contador > 0) {
     error.classList.remove('return-form');
-    event.preventDefault();
+    parar = true;
   }
 }
 
 // armazena os valores do form no array
 
 const registro = () => {
-  registroBtn.addEventListener('click', () => {
+  registroBtn.addEventListener('click', (event) => {
     validator();
-    novoCad.push(nome.value);
-    novoCad.push(sobrenome.value);
-    novoCad.push(email.value);
-    novoCad.push(niver.value);
-    if (document.getElementById('F').checked) {
-      novoCad.push(document.getElementById('F').value);
-    } else if (document.getElementById('M').checked) {
-      novoCad.push(document.getElementById('M').value);
+    if (parar === true) {
+      event.preventDefault();
     } else {
-      novoCad.push('Personalizado');
+      novoCad.push(nome.value);
+      novoCad.push(sobrenome.value);
+      novoCad.push(email.value);
+      novoCad.push(niver.value);
+      if (document.getElementById('F').checked) {
+        novoCad.push(document.getElementById('F').value);
+      } else if (document.getElementById('M').checked) {
+        novoCad.push(document.getElementById('M').value);
+      } else { novoCad.push('Personalizado'); }
+      apaga();
+      escreve();
     }
-    apaga();
-    escreve();
   });
 };
 
