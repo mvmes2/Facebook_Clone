@@ -89,60 +89,60 @@ const hidden = 'return-form';
 
 const validatorNome = () => {
   nome.addEventListener('keyup', () => {
-    if (nome.value === '') {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    } else {
+    if (nome.validity.valueMissing === true) {
       registroBtn.disabled = false;
       error.classList.add(hidden);
+    } else {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
     }
   });
 };
 
 const validatorSobrenome = () => {
   sobrenome.addEventListener('keyup', () => {
-    if (sobrenome.value === '') {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    } else {
+    if (sobrenome.validity.valueMissing === true) {
       registroBtn.disabled = false;
       error.classList.add(hidden);
+    } else {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
     }
   });
 };
 
 const validatorEmail = () => {
   email.addEventListener('keyup', () => {
-    if (email.value === '') {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    } else {
+    if (email.validity.valueMissing === true) {
       registroBtn.disabled = false;
       error.classList.add(hidden);
+    } else {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
     }
   });
 };
 
 const validatorSenha = () => {
   senha.addEventListener('keyup', () => {
-    if (senha.value === '') {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    } else {
+    if (senha.validity.valueMissing === true) {
       registroBtn.disabled = false;
       error.classList.add(hidden);
+    } else {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
     }
   });
 };
 
 const validatorNasc = () => {
   niver.addEventListener('keyup', () => {
-    if (niver.value === '') {
-      registroBtn.disabled = true;
-      error.classList.remove(hidden);
-    } else {
+    if (niver.validity.valueMissing === false) {
       registroBtn.disabled = false;
       error.classList.add(hidden);
+    } else {
+      registroBtn.disabled = true;
+      error.classList.remove(hidden);
     }
   });
 };
