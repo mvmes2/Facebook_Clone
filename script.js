@@ -96,6 +96,8 @@ function grava() {
   } else { novoCad.push('Personalizado'); }
 }
 
+// função ao clicar no botao de cadastro
+
 const registro = () => {
   registroBtn.addEventListener('click', (event) => {
     validator();
